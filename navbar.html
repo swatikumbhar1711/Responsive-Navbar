@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Navbar</title>
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">SPCL InfoTech</div>
+
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <button class="search-icon">&#128269;</button>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <script src="navbar.js"></script>
+
+  <main class="main-content">
+  <section class="hero">
+    <h1>Welcome to SPCL Infotech Website</h1>
+    <p>This is a sample responsive website </p>
+    <a href="#" class="btn-primary">Home</a>
+  </section>
+
+
+  <section class="more">
+    <h1>About</h1>
+    <br>
+    <p>SPCL Infotech actively hires interns in areas like Java, PHP (Laravel), ReactJS, Android, Flutter, DevOps, Digital Marketing, HR, Graphics, Sales, and more. </p>
+    <br><br>
+    <a href="#" class="btn-primary">Learn More</a>
+  </section>
+
+  <section class="service">
+    <h1>Services</h1>
+  </section>
+  <br><br>
+  <section class="features">
+    <div class="feature">
+      <h2>Web & Mobile App Development</h2>
+      <p>Web and mobile app Development involves creating applications for browsers & mobile devices using technologies
+        like HTML, CSS, JavaScript for the web & Swift, Kotlin or cross-platform tools like Flutter or ReactNative for mobile
+      </p>
+    </div>
+    <div class="feature">
+      <h2>Software Testing (Manual & Automation)</h2>
+      <p>Software testing ensures that applications work as intended by identifying bugs and verifying functionality.
+        Manual testing involves human testers executing test cases without tools, while automated testing uses
+        scripts and tools(like Selenium, Cypress or JUnit) to run tests repeatedly and effficiently.
+      </p>
+    </div>
+    <div class="feature">
+      <h2>ERP, UI/UX, Graphics Design</h2>
+      <p>ERP is Software that integrates core business processes like finance, HR, inventory and sales.
+        UI/UX design focuses on creating intuitive (UI) and satisfying (UX) user experiences through layout, navigation, and 
+        interation design.
+      </p>
+    </div>
+  </section>
+<br><br>
+  <section class="hero">
+    <h2>Contact Us</h2><br><br>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</main>
+
+</body>
+</html>

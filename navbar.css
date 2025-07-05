@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ffc3;
+}
+
+.nav-links li a::after {
+  content: "";
+  height: 2px;
+  background: #00ffc3;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background-color: #444;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+  display: none;
+  transition: all 0.3s;
+}
+
+.search-input.active {
+  display: inline-block;
+}
+
+.search-icon {
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+
+
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #75938c, #2c4b57);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.more {
+  padding: 4rem 2rem;
+  background: linear-gradient(to left, #75938c, #2c4b57);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.service h1 {
+  color: #532020;
+}
+
+.btn-primary {
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  color: #00b7ff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #f0f0f0;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.feature h2 {
+  color: #21404b;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+form button {
+  padding: 12px;
+  background: #15a6ce;
+  color: rgb(41, 39, 39);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+form button:hover {
+  background: #81e4f8;
+}
+
+
